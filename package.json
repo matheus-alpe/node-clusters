@@ -1,0 +1,19 @@
+{
+  "name": "node-cluster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/simple-api.js",
+  "type": "module",
+  "scripts": {
+    "start:simple": "node src/simple-api/server.js",
+    "test:simple": "npx autocannon -c 500 -d 20 --workers 10 --renderStatusCodes --latency --warmup [-c 1 -d 2] localhost:3000",
+    "start:cluster": "node src/cluster-api",
+    "test:cluster": "npx autocannon -c 500 -d 20 --workers 10 --renderStatusCodes --latency --warmup [-c 1 -d 2] localhost:3001"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autocannon": "^7.12.0"
+  }
+}
